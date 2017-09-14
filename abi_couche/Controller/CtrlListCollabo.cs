@@ -23,11 +23,11 @@ namespace abi_couche
             this.parent = parent;
             
             this.source = new BindingSource();
-            this.source.DataSource = new BindingList<Collaborateur>(Collaborateurs.getCollaborateurs().getAllCollaborateur());
+
             this.initWindow();
         }
 
-
+       
         private void initGrid(BindingSource source)
         {
             this.window.dgv.DataSource = source;
@@ -46,7 +46,7 @@ namespace abi_couche
             this.window = new FrmList();
             this.window.MdiParent = this.parent;
             this.window.Text = "Liste des Collaborateurs";
-            this.source.DataSource = new BindingList<Collaborateur>(Collaborateurs.getCollaborateurs().getAllCollaborateur());
+            this.source.DataSource = Collaborateurs.getCollaborateurs().ListCollaborateur;
             this.initGrid(this.source);
             this.window.dgv.SelectionChanged += new EventHandler(selectionChanged);
             this.window.dgv.CellDoubleClick += new DataGridViewCellEventHandler(showDetail);

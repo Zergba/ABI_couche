@@ -24,7 +24,7 @@ namespace abi_couche
         public void initWindow()
         {
             this.window.Text = "Ajouter un collaborateur";
-            this.window.groupBox1.Text = "Ajouter collaborateur n°" + "X";
+            this.window.groupBox1.Text = "Ajouter collaborateur";
 
             this.window.buttonOk.Text = "Valider";
             this.window.buttonAnnuler.Text = "Annuler";
@@ -33,10 +33,6 @@ namespace abi_couche
             
 
             this.window.buttonOk.Click += new EventHandler(valider);
-
-
-
-
         }
 
         public void valider(object sender, EventArgs e)
@@ -48,11 +44,11 @@ namespace abi_couche
             float salaireInitial = Convert.ToInt32(this.window.tbSalaire.Text);
 
 
-            Collaborateur c = new Collaborateur(0, nom, prenom, qualification, anciennete, salaireInitial, null);
+            Collaborateur c = new Collaborateur(nom, prenom, qualification, anciennete, salaireInitial, null);
             Collaborateurs.getCollaborateurs().AddCollaborateur(c);
-
-            this.window.Close();
             this.windowParent.dgv.Refresh();
+            this.window.Close();
+            
 
         }
 
