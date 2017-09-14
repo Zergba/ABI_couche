@@ -1,4 +1,5 @@
-﻿using System;
+﻿using abi_couche.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,20 +12,23 @@ namespace abi_couche
 
         private FrmList windowParent;
         private FrmDetailCollabo window;
+        private Collaborateur collaborateur;
        
         
         public CtrlAddCollabo(FrmList windowParent)
         {
+            this.collaborateur = new Collaborateur();
             this.windowParent = windowParent;
             this.window = new FrmDetailCollabo();
             initWindow();
+            initListener();
             this.window.ShowDialog();
         }
 
-        public void initWindow()
+        private void initWindow()
         {
             this.window.Text = "Ajouter un collaborateur";
-            this.window.groupBox1.Text = "Ajouter collaborateur";
+            this.window.groupBox1.Text = "Ajouter collaborateur n°"+Collaborateur.CurrentMatricule;
 
             this.window.buttonOk.Text = "Valider";
             this.window.buttonAnnuler.Text = "Annuler";
@@ -32,10 +36,16 @@ namespace abi_couche
             this.window.buttonAppliquerModifier.Visible = false;
             
 
-            this.window.buttonOk.Click += new EventHandler(valider);
+           
         }
 
-        public void valider(object sender, EventArgs e)
+        private void initListener()
+        {
+            this.window.buttonOk.Click += new EventHandler(ClickValider);
+            this.window.buttonAnnuler.Click += new EventHandler(ClickAnnuler);
+            this.window.buttonAddContrat.Click += new EventHandler(ClickAddContrat);
+        }
+        private void ClickValider(object sender, EventArgs e)
         {
             string nom = this.window.tbNom.Text;
             string prenom = this.window.tbPrenom.Text;
@@ -43,28 +53,27 @@ namespace abi_couche
             int anciennete = Convert.ToInt32(this.window.tbAncienneté.Text);
             float salaireInitial = Convert.ToInt32(this.window.tbSalaire.Text);
 
-
-            Collaborateur c = new Collaborateur(nom, prenom, qualification, anciennete, salaireInitial, null);
-            Collaborateurs.getCollaborateurs().AddCollaborateur(c);
+            collaborateur.NomCollabo = nom;
+            collaborateur.PrenomCollabo =prenom;
+            collaborateur.QualificationPrincipaleCourante =qualification;
+            collaborateur.SalaireBrut =salaireInitial;
+            collaborateur.Anciennete =anciennete;
+            
+            Collaborateurs.getCollaborateurs().AddCollaborateur(collaborateur);
             this.windowParent.dgv.Refresh();
             this.window.Close();
             
 
         }
 
-        public void annuler(object sender, EventArgs e)
+        private void ClickAnnuler(object sender, EventArgs e)
         {
 
         }
 
-        public void AddContrat(object sender, EventArgs e)
+        private void ClickAddContrat(object sender, EventArgs e)
         {
-
-        }
-
-        public void AddImage(object sender, EventArgs e)
-        {
-
+            CtrlAddContrat cac = new CtrlAddContrat(this.collaborateur);
         }
 
     }

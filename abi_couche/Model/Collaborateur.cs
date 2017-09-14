@@ -9,7 +9,7 @@ namespace abi_couche
    public class Collaborateur
     {
 
-        private static int CurrentMatricule = 1;
+        private static int currentMatricule = 1;
 
         private int matricule;
         private string nomCollabo;
@@ -20,6 +20,10 @@ namespace abi_couche
         private List<Contrat> contrats;
         
                
+        public Collaborateur()
+        {
+            this.contrats = new List<Contrat>();
+        }
         public Collaborateur(int matricule, string nomCollabo, string prenomCollabo, string qualificationPrincipaleCourante, int anciennete, float salaireBrut, List<Contrat> contrats)
         {
             this.matricule = matricule;
@@ -34,7 +38,7 @@ namespace abi_couche
         }
         public Collaborateur(string nomCollabo, string prenomCollabo, string qualificationPrincipaleCourante, int anciennete, float salaireBrut, List<Contrat> contrats)
         {
-            this.matricule = CurrentMatricule++;
+            this.matricule = currentMatricule++;
             this.nomCollabo = nomCollabo;
             this.prenomCollabo = prenomCollabo;
             this.qualificationPrincipaleCourante = qualificationPrincipaleCourante;
@@ -43,6 +47,26 @@ namespace abi_couche
             this.contrats = contrats;
 
 
+        }
+        public Collaborateur(string nomCollabo, string prenomCollabo, string qualificationPrincipaleCourante, int anciennete, float salaireBrut)
+        {
+            this.matricule = currentMatricule++;
+            this.nomCollabo = nomCollabo;
+            this.prenomCollabo = prenomCollabo;
+            this.qualificationPrincipaleCourante = qualificationPrincipaleCourante;
+            this.anciennete = anciennete;
+            this.salaireBrut = salaireBrut;
+            this.contrats = new List<Contrat>();
+
+
+        }
+
+        public static int CurrentMatricule
+        {
+            get
+            {
+               return currentMatricule;
+            }
         }
 
         public int Matricule

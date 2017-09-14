@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace abi_couche
 {
-    class Interim:Contrat
+    class Interim : Contrat
     {
+        public Interim(DateTime dateDebut, DateTime dateFin, string motif, float remuneration) : base(dateDebut, dateFin, motif, remuneration)
+        {
+        }
     }
 }

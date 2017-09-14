@@ -1,4 +1,5 @@
-﻿using System;
+﻿using abi_couche.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace abi_couche
             this.collaborateur = collaborateur;
 
             initForm();
+            initListener();
             loadCollaborateur();
 
             fd.Show();
@@ -36,9 +38,6 @@ namespace abi_couche
 
             fd.Text = "Détail du Client n°" + collaborateur.Matricule.ToString();
 
-
-
-
         }
 
         private void initForm()
@@ -50,11 +49,33 @@ namespace abi_couche
             fd.tbPrenom.ReadOnly = true;
             fd.tbQualification.ReadOnly = true;
             fd.tbSalaire.ReadOnly = true;
+            fd.buttonAnnuler.Enabled = false;
 
-            
+        }
+
+        private void initListener()
+        {
+            fd.buttonOk.Click += new EventHandler(ClickOk);
+            fd.buttonAppliquerModifier.Click += new EventHandler(ClickModifier);
+            fd.buttonAddContrat.Click += new EventHandler(ClickAddContrat);
 
 
+        }
 
+        private void ClickOk(object sender, EventArgs e)
+        {
+            fd.Close();
+        }
+
+        private void ClickModifier(object sender, EventArgs e)
+        {
+
+            CtrlUpdateCollabo cuc = new CtrlUpdateCollabo(this.collaborateur);
+        }
+
+        private void ClickAddContrat(object sender, EventArgs e)
+        {
+             CtrlAddContrat cac = new CtrlAddContrat(collaborateur);
         }
     }
 }

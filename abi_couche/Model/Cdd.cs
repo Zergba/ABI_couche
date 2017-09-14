@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace abi_couche
 {
-    class Cdd:Contrat
+    class Cdd : Contrat
     {
+        public Cdd(DateTime dateDebut, DateTime dateFin, string motif, float remuneration) : base(dateDebut, dateFin, motif, remuneration)
+        {
+            
+
+
+        }
     }
 }

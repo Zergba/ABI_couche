@@ -28,148 +28,244 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
+            this.buttonOk = new System.Windows.Forms.Button();
+            this.lblSalaire = new System.Windows.Forms.Label();
+            this.tbSalaire = new System.Windows.Forms.TextBox();
+            this.lblDateDebut = new System.Windows.Forms.Label();
+            this.lblDateFin = new System.Windows.Forms.Label();
+            this.tbMotif = new System.Windows.Forms.TextBox();
+            this.gbContrat = new System.Windows.Forms.GroupBox();
+            this.tbAgenceEcole = new System.Windows.Forms.TextBox();
+            this.lblAgenceEcole = new System.Windows.Forms.Label();
+            this.gbType = new System.Windows.Forms.GroupBox();
+            this.rbStage = new System.Windows.Forms.RadioButton();
+            this.rbInterim = new System.Windows.Forms.RadioButton();
+            this.rbCDD = new System.Windows.Forms.RadioButton();
+            this.rbCDI = new System.Windows.Forms.RadioButton();
+            this.dbFin = new System.Windows.Forms.DateTimePicker();
+            this.dpDebut = new System.Windows.Forms.DateTimePicker();
+            this.gbMotif = new System.Windows.Forms.GroupBox();
+            this.gbContrat.SuspendLayout();
+            this.gbType.SuspendLayout();
+            this.gbMotif.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonAnnuler
             // 
-            this.button1.Location = new System.Drawing.Point(145, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Location = new System.Drawing.Point(193, 331);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnnuler.TabIndex = 0;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonOk
             // 
-            this.button2.Location = new System.Drawing.Point(226, 217);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonOk.Location = new System.Drawing.Point(274, 331);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.TabIndex = 1;
+            this.buttonOk.Text = "Valider";
+            this.buttonOk.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblSalaire
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.lblSalaire.AutoSize = true;
+            this.lblSalaire.Location = new System.Drawing.Point(27, 21);
+            this.lblSalaire.Name = "lblSalaire";
+            this.lblSalaire.Size = new System.Drawing.Size(39, 13);
+            this.lblSalaire.TabIndex = 2;
+            this.lblSalaire.Text = "Salaire";
             // 
-            // textBox1
+            // tbSalaire
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbSalaire.Location = new System.Drawing.Point(133, 18);
+            this.tbSalaire.Name = "tbSalaire";
+            this.tbSalaire.Size = new System.Drawing.Size(184, 20);
+            this.tbSalaire.TabIndex = 3;
             // 
-            // label2
+            // lblDateDebut
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.lblDateDebut.AutoSize = true;
+            this.lblDateDebut.Location = new System.Drawing.Point(27, 50);
+            this.lblDateDebut.Name = "lblDateDebut";
+            this.lblDateDebut.Size = new System.Drawing.Size(75, 13);
+            this.lblDateDebut.TabIndex = 4;
+            this.lblDateDebut.Text = "Date de début";
             // 
-            // textBox2
+            // lblDateFin
             // 
-            this.textBox2.Location = new System.Drawing.Point(47, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.lblDateFin.AutoSize = true;
+            this.lblDateFin.Location = new System.Drawing.Point(27, 76);
+            this.lblDateFin.Name = "lblDateFin";
+            this.lblDateFin.Size = new System.Drawing.Size(62, 13);
+            this.lblDateFin.TabIndex = 6;
+            this.lblDateFin.Text = "Date de Fin";
             // 
-            // label3
+            // tbMotif
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(153, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.tbMotif.Location = new System.Drawing.Point(8, 19);
+            this.tbMotif.Multiline = true;
+            this.tbMotif.Name = "tbMotif";
+            this.tbMotif.Size = new System.Drawing.Size(260, 75);
+            this.tbMotif.TabIndex = 8;
             // 
-            // textBox3
+            // gbContrat
             // 
-            this.textBox3.Location = new System.Drawing.Point(196, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(92, 20);
-            this.textBox3.TabIndex = 7;
+            this.gbContrat.Controls.Add(this.tbAgenceEcole);
+            this.gbContrat.Controls.Add(this.lblAgenceEcole);
+            this.gbContrat.Controls.Add(this.gbType);
+            this.gbContrat.Controls.Add(this.dbFin);
+            this.gbContrat.Controls.Add(this.dpDebut);
+            this.gbContrat.Controls.Add(this.lblSalaire);
+            this.gbContrat.Controls.Add(this.tbSalaire);
+            this.gbContrat.Controls.Add(this.lblDateDebut);
+            this.gbContrat.Controls.Add(this.lblDateFin);
+            this.gbContrat.Controls.Add(this.gbMotif);
+            this.gbContrat.Location = new System.Drawing.Point(13, 13);
+            this.gbContrat.Name = "gbContrat";
+            this.gbContrat.Size = new System.Drawing.Size(336, 312);
+            this.gbContrat.TabIndex = 10;
+            this.gbContrat.TabStop = false;
+            this.gbContrat.Text = "groupBox1";
             // 
-            // textBox4
+            // tbAgenceEcole
             // 
-            this.textBox4.Location = new System.Drawing.Point(9, 111);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 71);
-            this.textBox4.TabIndex = 8;
+            this.tbAgenceEcole.Location = new System.Drawing.Point(133, 96);
+            this.tbAgenceEcole.Name = "tbAgenceEcole";
+            this.tbAgenceEcole.Size = new System.Drawing.Size(184, 20);
+            this.tbAgenceEcole.TabIndex = 9;
             // 
-            // label4
+            // lblAgenceEcole
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.lblAgenceEcole.AutoSize = true;
+            this.lblAgenceEcole.Location = new System.Drawing.Point(27, 99);
+            this.lblAgenceEcole.Name = "lblAgenceEcole";
+            this.lblAgenceEcole.Size = new System.Drawing.Size(76, 13);
+            this.lblAgenceEcole.TabIndex = 14;
+            this.lblAgenceEcole.Text = "Agence/Ecole";
             // 
-            // groupBox1
+            // gbType
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(295, 188);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gbType.Controls.Add(this.rbStage);
+            this.gbType.Controls.Add(this.rbInterim);
+            this.gbType.Controls.Add(this.rbCDD);
+            this.gbType.Controls.Add(this.rbCDI);
+            this.gbType.Location = new System.Drawing.Point(9, 228);
+            this.gbType.Name = "gbType";
+            this.gbType.Size = new System.Drawing.Size(274, 69);
+            this.gbType.TabIndex = 13;
+            this.gbType.TabStop = false;
+            this.gbType.Text = "Type de Contrat";
+            // 
+            // rbStage
+            // 
+            this.rbStage.AutoSize = true;
+            this.rbStage.Location = new System.Drawing.Point(215, 28);
+            this.rbStage.Name = "rbStage";
+            this.rbStage.Size = new System.Drawing.Size(53, 17);
+            this.rbStage.TabIndex = 3;
+            this.rbStage.TabStop = true;
+            this.rbStage.Text = "Stage";
+            this.rbStage.UseVisualStyleBackColor = true;
+            // 
+            // rbInterim
+            // 
+            this.rbInterim.AutoSize = true;
+            this.rbInterim.Location = new System.Drawing.Point(142, 28);
+            this.rbInterim.Name = "rbInterim";
+            this.rbInterim.Size = new System.Drawing.Size(56, 17);
+            this.rbInterim.TabIndex = 2;
+            this.rbInterim.TabStop = true;
+            this.rbInterim.Text = "Interim";
+            this.rbInterim.UseVisualStyleBackColor = true;
+            // 
+            // rbCDD
+            // 
+            this.rbCDD.AutoSize = true;
+            this.rbCDD.Location = new System.Drawing.Point(72, 28);
+            this.rbCDD.Name = "rbCDD";
+            this.rbCDD.Size = new System.Drawing.Size(48, 17);
+            this.rbCDD.TabIndex = 1;
+            this.rbCDD.TabStop = true;
+            this.rbCDD.Text = "CDD";
+            this.rbCDD.UseVisualStyleBackColor = true;
+            // 
+            // rbCDI
+            // 
+            this.rbCDI.AutoSize = true;
+            this.rbCDI.Location = new System.Drawing.Point(8, 28);
+            this.rbCDI.Name = "rbCDI";
+            this.rbCDI.Size = new System.Drawing.Size(43, 17);
+            this.rbCDI.TabIndex = 0;
+            this.rbCDI.TabStop = true;
+            this.rbCDI.Text = "CDI";
+            this.rbCDI.UseVisualStyleBackColor = true;
+            // 
+            // dbFin
+            // 
+            this.dbFin.Location = new System.Drawing.Point(133, 70);
+            this.dbFin.Name = "dbFin";
+            this.dbFin.Size = new System.Drawing.Size(184, 20);
+            this.dbFin.TabIndex = 11;
+            // 
+            // dpDebut
+            // 
+            this.dpDebut.Location = new System.Drawing.Point(133, 44);
+            this.dpDebut.Name = "dpDebut";
+            this.dpDebut.Size = new System.Drawing.Size(184, 20);
+            this.dpDebut.TabIndex = 10;
+            // 
+            // gbMotif
+            // 
+            this.gbMotif.Controls.Add(this.tbMotif);
+            this.gbMotif.Location = new System.Drawing.Point(9, 122);
+            this.gbMotif.Name = "gbMotif";
+            this.gbMotif.Size = new System.Drawing.Size(274, 100);
+            this.gbMotif.TabIndex = 12;
+            this.gbMotif.TabStop = false;
+            this.gbMotif.Text = "Motif";
             // 
             // FrmDetailContrat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 256);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(360, 363);
+            this.Controls.Add(this.buttonOk);
+            this.Controls.Add(this.buttonAnnuler);
+            this.Controls.Add(this.gbContrat);
             this.Name = "FrmDetailContrat";
             this.Text = "FrmDetailContrat";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbContrat.ResumeLayout(false);
+            this.gbContrat.PerformLayout();
+            this.gbType.ResumeLayout(false);
+            this.gbType.PerformLayout();
+            this.gbMotif.ResumeLayout(false);
+            this.gbMotif.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox1;
+        internal System.Windows.Forms.Button buttonAnnuler;
+        internal System.Windows.Forms.Button buttonOk;
+        private System.Windows.Forms.Label lblSalaire;
+        internal System.Windows.Forms.TextBox tbSalaire;
+        private System.Windows.Forms.Label lblDateDebut;
+        private System.Windows.Forms.Label lblDateFin;
+        internal System.Windows.Forms.TextBox tbMotif;
+        internal System.Windows.Forms.GroupBox gbContrat;
+        internal System.Windows.Forms.DateTimePicker dpDebut;
+        internal System.Windows.Forms.DateTimePicker dbFin;
+        internal System.Windows.Forms.GroupBox gbType;
+        private System.Windows.Forms.GroupBox gbMotif;
+        internal System.Windows.Forms.RadioButton rbInterim;
+        internal System.Windows.Forms.RadioButton rbCDD;
+        internal System.Windows.Forms.RadioButton rbCDI;
+        internal System.Windows.Forms.RadioButton rbStage;
+        private System.Windows.Forms.Label lblAgenceEcole;
+        internal System.Windows.Forms.TextBox tbAgenceEcole;
     }
 }
