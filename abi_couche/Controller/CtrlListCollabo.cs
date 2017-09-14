@@ -14,17 +14,29 @@ namespace abi_couche
 
         private MDIParent parent;
         private FrmList window;
-        private Collaborateurs data;
+        
         private BindingSource source;
 
         public CtrlListCollabo(MDIParent parent)
         {
 
             this.parent = parent;
-            this.data = new Collaborateurs();
+            
             this.source = new BindingSource();
-            this.source.DataSource = new BindingList<Collaborateur>(this.data.getAllCollaborateur());
+            this.source.DataSource = new BindingList<Collaborateur>(Collaborateurs.getCollaborateurs().getAllCollaborateur());
             this.initWindow();
+        }
+
+
+        private void initGrid(BindingSource source)
+        {
+            this.window.dgv.DataSource = source;
+            this.window.dgv.Refresh();
+        }
+        private void initGrid()
+        {
+            this.window.dgv.DataSource = new BindingList<Collaborateur>();
+            this.window.dgv.Refresh();
         }
 
         private void initWindow()
@@ -34,8 +46,8 @@ namespace abi_couche
             this.window = new FrmList();
             this.window.MdiParent = this.parent;
             this.window.Text = "Liste des Collaborateurs";
-            this.source.DataSource = new BindingList<Collaborateur>(this.data.getAllCollaborateur());
-            this.window.dgv.DataSource = this.source;
+            this.source.DataSource = new BindingList<Collaborateur>(Collaborateurs.getCollaborateurs().getAllCollaborateur());
+            this.initGrid(this.source);
             this.window.dgv.SelectionChanged += new EventHandler(selectionChanged);
             this.window.dgv.CellDoubleClick += new DataGridViewCellEventHandler(showDetail);
             this.window.buttonRight.Click += new EventHandler(showDetail);
@@ -54,7 +66,7 @@ namespace abi_couche
 
         private void showAdd(object senders, EventArgs e)
         {
-            CtrlAddCollabo cac = new CtrlAddCollabo();
+            CtrlAddCollabo cac = new CtrlAddCollabo(this.window);
         }
 
         private void showDetail(object senders, EventArgs e)
@@ -69,7 +81,12 @@ namespace abi_couche
 
         private void showUpdate(object senders, EventArgs e)
         {
-            CtrlUpdateCollabo cuc = new CtrlUpdateCollabo();
+            foreach (DataGridViewRow row in this.window.dgv.SelectedRows)
+            {
+                Collaborateur collaborateur = row.DataBoundItem as Collaborateur;
+                CtrlUpdateCollabo cuc = new CtrlUpdateCollabo(collaborateur);
+            }
+            
         }
 
         private void selectionChanged(object senders, EventArgs e)

@@ -46,49 +46,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Augmentation.cs" />
-    <Compile Include="Avenant.cs" />
-    <Compile Include="Cdd.cs" />
-    <Compile Include="Cdi.cs" />
-    <Compile Include="Collaborateur.cs" />
-    <Compile Include="Collaborateurs.cs" />
-    <Compile Include="Contrat.cs" />
-    <Compile Include="CtrlAddCollabo.cs" />
-    <Compile Include="CtrlDetailCollabo.cs" />
-    <Compile Include="CtrlListCollabo.cs" />
-    <Compile Include="CtrlMDI.cs" />
-    <Compile Include="CtrlUpdateCollabo.cs" />
-    <Compile Include="FrmDetail.cs">
+    <Compile Include="Controller\CtrlAddContrat.cs" />
+    <Compile Include="Controller\CtrlDetailContrat.cs" />
+    <Compile Include="Controller\CtrlListContrat.cs" />
+    <Compile Include="Model\Cdd.cs" />
+    <Compile Include="Model\Cdi.cs" />
+    <Compile Include="Model\Collaborateur.cs" />
+    <Compile Include="Model\Collaborateurs.cs" />
+    <Compile Include="Model\Contrat.cs" />
+    <Compile Include="Controller\CtrlAddCollabo.cs" />
+    <Compile Include="Controller\CtrlDetailCollabo.cs" />
+    <Compile Include="Controller\CtrlListCollabo.cs" />
+    <Compile Include="Controller\CtrlMDI.cs" />
+    <Compile Include="Controller\CtrlUpdateCollabo.cs" />
+    <Compile Include="View\FrmDetailCollabo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDetail.Designer.cs">
-      <DependentUpon>FrmDetail.cs</DependentUpon>
+    <Compile Include="View\FrmDetailCollabo.Designer.cs">
+      <DependentUpon>FrmDetailCollabo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmList.cs">
+    <Compile Include="View\FrmDetailContrat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmList.Designer.cs">
+    <Compile Include="View\FrmDetailContrat.Designer.cs">
+      <DependentUpon>FrmDetailContrat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmList.Designer.cs">
       <DependentUpon>FrmList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interim.cs" />
-    <Compile Include="MDIParent.cs">
+    <Compile Include="Model\Interim.cs" />
+    <Compile Include="View\MDIParent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIParent.Designer.cs">
+    <Compile Include="View\MDIParent.Designer.cs">
       <DependentUpon>MDIParent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Qualification.cs" />
-    <Compile Include="Qualifications.cs" />
-    <Compile Include="Stage.cs" />
-    <EmbeddedResource Include="FrmDetail.resx">
-      <DependentUpon>FrmDetail.cs</DependentUpon>
+    <Compile Include="Model\Stage.cs" />
+    <EmbeddedResource Include="View\FrmDetailCollabo.resx">
+      <DependentUpon>FrmDetailCollabo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmList.resx">
+    <EmbeddedResource Include="View\FrmDetailContrat.resx">
+      <DependentUpon>FrmDetailContrat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmList.resx">
       <DependentUpon>FrmList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MDIParent.resx">
+    <EmbeddedResource Include="View\MDIParent.resx">
       <DependentUpon>MDIParent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

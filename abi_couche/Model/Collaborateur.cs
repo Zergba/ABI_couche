@@ -16,11 +16,9 @@ namespace abi_couche
         private int anciennete;
         private float salaireBrut;
         private List<Contrat> contrats;
-        private List<Augmentation> augmentations;
-        private Boolean actif;
-        private string photographie;
-
-        public Collaborateur(int matricule, string nomCollabo, string prenomCollabo, string qualificationPrincipaleCourante, int anciennete, float salaireBrut, bool actif)
+        
+       
+        public Collaborateur(int matricule, string nomCollabo, string prenomCollabo, string qualificationPrincipaleCourante, int anciennete, float salaireBrut, List<Contrat> contrats)
         {
             this.matricule = matricule;
             this.nomCollabo = nomCollabo;
@@ -28,9 +26,9 @@ namespace abi_couche
             this.qualificationPrincipaleCourante = qualificationPrincipaleCourante;
             this.anciennete = anciennete;
             this.salaireBrut = salaireBrut;
-            //this.contrats = contrats;
-            //this.augmentations = augmentations;
-            this.Actif = actif;
+            this.contrats = contrats;
+       
+            
         }
 
         public int Matricule
@@ -127,31 +125,9 @@ namespace abi_couche
             }
         }
 
-        public List<Augmentation> Augmentations
-        {
-            get
-            {
-                return augmentations;
-            }
+      
 
-            set
-            {
-                augmentations = value;
-            }
-        }
-
-        public bool Actif
-        {
-            get
-            {
-                return actif;
-            }
-
-            set
-            {
-                actif = value;
-            }
-        }
+       
 
         public override string ToString()
         {

@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace abi_couche
 {
-    public partial class FrmDetail : Form
+    public partial class FrmDetailContrat : Form
     {
-        public FrmDetail()
+        public FrmDetailContrat()
         {
             InitializeComponent();
-
         }
+
+       
     }
 }

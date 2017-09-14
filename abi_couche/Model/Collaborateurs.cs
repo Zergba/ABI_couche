@@ -9,14 +9,21 @@ namespace abi_couche
     public class Collaborateurs
     {
 
-        private List<Collaborateur> listCollaborateur; 
-
+        private List<Collaborateur> listCollaborateur;
+        private static Collaborateurs collaborateurs;
         
-        public Collaborateurs()
+        private Collaborateurs()
         {
             this.listCollaborateur = new List<Collaborateur>();
             this.init();
         }
+
+        public static Collaborateurs getCollaborateurs()
+        {
+            if (Collaborateurs.collaborateurs == null) Collaborateurs.collaborateurs = new Collaborateurs();
+            return Collaborateurs.collaborateurs;
+        }
+
 
         public void AddCollaborateur(Collaborateur collaborateur)
         {
@@ -60,7 +67,7 @@ namespace abi_couche
 
         private void init()
         {
-            this.AddCollaborateur(new Collaborateur(1,"a","a","a",10,10,true));
+            this.AddCollaborateur(new Collaborateur(1,"a","a","a",10,10,null));
         }
 
 

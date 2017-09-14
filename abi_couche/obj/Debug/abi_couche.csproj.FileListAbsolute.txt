@@ -8,4 +8,5 @@ c:\users\administrateur\documents\visual studio 2015\Projects\abi_couche\abi_cou
 c:\users\administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.pdb
 c:\users\administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.FrmList.resources
 c:\users\administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.MDIParent.resources
-c:\users\administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.FrmDetail.resources
+C:\Users\Administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.FrmDetailCollabo.resources
+C:\Users\Administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.FrmDetailContrat.resources

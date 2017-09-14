@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace abi_couche
 {
-    class CtrlDetailCollabo
+    class CtrlUpdateCollabo
     {
 
+        FrmDetailCollabo fd;
+        Collaborateur collaborateur;
 
-        private Collaborateur collaborateur;
-        private FrmDetail fd;
-
-        public CtrlDetailCollabo(Collaborateur collaborateur)
+        public CtrlUpdateCollabo(Collaborateur collaborateur)
         {
-            this.collaborateur = collaborateur;
-
             initForm();
-            loadCollaborateur();
+            this.collaborateur = collaborateur;
+            this.loadCollaborateur();
+            fd.ShowDialog();
 
-            fd.Show();
         }
 
         private void loadCollaborateur()
@@ -32,19 +31,18 @@ namespace abi_couche
             fd.tbNom.Text = collaborateur.NomCollabo;
             fd.tbPrenom.Text = collaborateur.PrenomCollabo;
             fd.tbQualification.Text = collaborateur.QualificationPrincipaleCourante;
-            fd.tbSalaireInitial.Text = collaborateur.SalaireBrut.ToString();
-            fd.checkBox1.Checked = collaborateur.Actif;
+            fd.tbSalaire.Text = collaborateur.SalaireBrut.ToString();
 
-
-
+            fd.Text = "Détail du Client n°" + collaborateur.Matricule.ToString();
 
         }
 
         private void initForm()
         {
-            this.fd = new FrmDetail();
-            this.fd.buttonPicture.Visible = false;
-            this.fd.checkBox1.Text = "Collaborateur Actif";
+            fd = new FrmDetailCollabo();
+            fd.buttonAppliquerModifier.Text = "Appliquer";
         }
+
+
     }
 }
