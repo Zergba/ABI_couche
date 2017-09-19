@@ -10,3 +10,16 @@ c:\users\administrateur\documents\visual studio 2015\Projects\abi_couche\abi_cou
 c:\users\administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.MDIParent.resources
 C:\Users\Administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.FrmDetailCollabo.resources
 C:\Users\Administrateur\documents\visual studio 2015\Projects\abi_couche\abi_couche\obj\Debug\abi_couche.FrmDetailContrat.resources
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\bin\Debug\abi_couche.exe.config
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\bin\Debug\abi_couche.exe
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\bin\Debug\abi_couche.pdb
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.csprojResolveAssemblyReference.cache
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.FrmDetailCollabo.resources
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.FrmDetailContrat.resources
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.FrmList.resources
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.MDIParent.resources
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.Properties.Resources.resources
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.csproj.GenerateResource.Cache
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.exe
+C:\Users\Administrateur\Source\Repos\ABI_couche\abi_couche\obj\Debug\abi_couche.pdb
